@@ -2,7 +2,8 @@
 
 When I schedule R scripts to run every day or week I like to keep track of them without having to dig through logs and files. This can be done using an app called `slackr` which allows the code to post to a Slack channel.
 
-To set this up the following steps have to be followed:
+## First I have to set up Slack APIs 
+This can be done by following the following steps:
 - go to https://api.slack.com/slack-apps to set up the slack-API and webhook
 
 ![Build Slack App Site](build_slack_apps.jpg)
@@ -17,21 +18,23 @@ To set this up the following steps have to be followed:
 
 ![Incoming Webhooks](incoming_webhooks.jpg)
 
-- Click on `Add New Webhook to Workspace
+- Click on `Add New Webhook to Workspace`
 - On the screen that comes up you should see a `Post to` section with a dropdown menu, chose there what channel you would like to post do (for demonstration purposes I chose `Slackbot, which is private to you`)
-- Click the green button (`Authorize`), this will return you to the `Incoming Webhooks` screen where the `Webhook URL` section now has an entry starting with `https://hooks.slack.com/services/...`
+- Click the green button (`Authorize`), this will return you to the `Incoming Webhooks` screen where the `Webhook URL` section now has an entry starting with `https://hooks.slack.com/services/...` 
 
-- Return to `Basic Information` and click on `Add features and functionality` and click on `Permissions`, this will retired you to the `OAuth & Permissions` screen. The first section gives you the OAuth Access Token which is not needed in R but needed in Python.
+- Return to `Basic Information` and click on `Add features and functionality` and click on `Permissions`, this will return you to the `OAuth & Permissions` screen. The first section gives you the OAuth Access Token which is not needed in R but needed in Python.
 
 ![OAuth Tokens & Redirect URLs](oauth.jpg)
 
 - Scroll down to `Scopes` and in `Select Permission Scopes` add type `chat:write:bot` into the `Add permission by scope or API method` dropdown menu.
 - Click on `Save Changes`, which will prompt you to Reinstall the App, click on the link and get redirected to the same screen as before, again chose which channel you want to post to and `Authorize`.
+- This will create a new entry starting with `https://hooks.slack.com/services/...` in the `Webhook URLs for Your Workspace` within `Incoming Webhooks` menu which you **will need for your R code**.
 
 ![Scopes](scopes.jpg)
 
 **Viola, the Slack API is set up**
 
+## Now to the R code
 
 
 
