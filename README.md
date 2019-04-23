@@ -13,7 +13,7 @@ This can be done by following the following steps:
 
 When the below window opens:
 
-![Create App] (create_app.jpg)
+![Create App](create_app.jpg)
 
 - Chose the App Name & the Slack Workspace
 
