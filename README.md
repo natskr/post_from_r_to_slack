@@ -11,6 +11,14 @@ This can be done by following the following steps:
 
 - Click on the green button `Create Slack App`
 
+When the below window opens:
+
+![Create App] (create_app.jpg)
+
+- Chose the App Name & the Slack Workspace
+
+- Click `Create App`
+
 - go to `Basic Information` in the menu on the left
 
 ![Basic Information](basic_information.jpg)
@@ -45,10 +53,10 @@ This can be done by following the following steps:
 ### .slackr
 - Make a file called `.slackr` with the following entries
 ```
-api_token : xoxp-....
-channel : #slack_channel
-username : slack_username
-incoming_webhook_url : https://hooks.slack.com/services/...
+api_token: xoxp-....
+channel: #slack_channel
+username: slack_username
+incoming_webhook_url: https://hooks.slack.com/services/...
 ```
 ### file_to_schedule.R
 - Create the file that contains the code that will run regularly
